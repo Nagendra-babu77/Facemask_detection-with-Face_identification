@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Monitoring</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+<!--
+.style1 {color: #0066CC}
+-->
+    </style>
+</head>
+  <body>
+    <div align="center" class="hd">Monitoring System</div>
+	<div align="center" class="sd">
+	<a href="/">Home</a> |
+	<a href="/login">Login</a> |
+	<a href="/monitor">Monitoring</a>
+	</div>
+	
+	
+	</h2>
+	<div align="center"><img src="{{ url_for('video_feed') }}">
+  </div>
+  
+  <h2 align="center">{{msg}}</h2>
+  <p>
+    <script>
+	//Using setTimeout to execute a function after 5 seconds.
+	setTimeout(function () {
+	//   //Redirect with JavaScript
+	  window.location.href="/monitor?act={{ act }}";
+	}, 10000);
+	</script>
+  </p>
+  </body>
+</html>

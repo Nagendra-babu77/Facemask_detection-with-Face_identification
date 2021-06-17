@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Monitoring</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+    <div align="center" class="hd">Monitoring System</div>
+	<div align="center" class="sd">
+	<a href="/home">Home</a> |
+	<a href="/register">Register</a> |
+	<a href="/logout">Logout</a>
+	</div>
+	
+	
+    
+    <p>&nbsp;</p>
+    <h2 align="center">Capture Photo </h2>
+    <h3 align="center">&nbsp;</h3>
+  <p>&nbsp;</p>
+  <div align="center"><img src="{{ url_for('video_feed') }}">
+  <p>&nbsp;</p>
+  <form name="form1" method="post" action="/capture">
+  
+    <div align="center">
+      <input type="text" name="regno" value="{{ regno }}">
+      <select name="mask_st">
+        <option value="1">Mask Weared</option>
+        <option value="2">Mask not weared</option>
+      </select>
+      <input type="submit" name="Submit" value="Submit">
+        
+    </div>
+  </form>
+  <p align="center">&nbsp;</p>
+</body>
+</html>

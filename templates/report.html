@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Monitoring</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+    <div align="center" class="hd">Monitoring System</div>
+	<div align="center" class="sd">
+	<a href="/home">Home</a> |
+	<a href="/register">Register</a> |
+	<a href="/report">Report</a> |
+	<a href="/logout">Logout</a></div>
+	
+	
+    
+    <h3 align="center">Report</h3>
+    <table width="829" border="1" align="center">
+    <tr>
+      <th>Regno</th>
+      <th>Status</th>
+      <th>Fine</th>
+      <th>Date/Time</th>
+      </tr>
+	
+	{% for row in data %}
+	
+    <tr>
+      <td>{{ row[1] }}</td>
+	  <td>
+	  {% if row[2]==2 %}
+	  Mask not weared
+	  {% else %}
+	  Mask weared
+	  {% endif %}
+	  </td>
+	  <td>{{ row[3] }}</td>
+	  <td>{{ row[4] }}</td>
+	  </tr>
+	 {% endfor %}
+  </table>
+  <p align="center">&nbsp;</p>
+</body>
+</html>

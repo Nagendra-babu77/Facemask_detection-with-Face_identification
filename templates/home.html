@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Monitoring</title>
+    <link href="../static/style.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+    <div align="center" class="hd">Monitoring System</div>
+	<div align="center" class="sd">
+	<a href="/home">Home</a> |
+	<a href="/register">Register</a> |
+	<a href="/report">Report</a> |
+	<a href="/logout">Logout</a>
+	</div>
+	
+	
+    
+    <p>&nbsp;</p>
+    <h1 align="center">Welcome to Administrator </h1>
+<h3 align="center">Information </h3>
+  <table width="829" border="1" align="center">
+    <tr>
+      <th>&nbsp;</th>
+      
+      <th>Regno</th>
+      <th>Name</th>
+      <th>Mobile No. </th>
+      <th>E-mail</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+	
+	{% for row in data %}
+	
+    <tr>
+      <td><img src="../static/photo/{{ row[5] }}" width="80" height="80"></td>
+      <td>{{ row[0] }}</td>
+	  <td>{{ row[1] }}</td>
+	  <td>{{ row[2] }}</td>
+	  <td>{{ row[3] }}</td>
+	  <td>{{ row[4] }}</td>
+      <td><a href="/capture?regno={{ row[0] }}">Capture Photo </a> |
+	  <a href="/home?act=del&did={{ row[0] }}">Delete </a>
+	  </td>
+    </tr>
+	 {% endfor %}
+  </table>
+  <p align="center">&nbsp;</p>
+</body>
+</html>

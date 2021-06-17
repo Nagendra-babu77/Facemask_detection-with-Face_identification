@@ -1,0 +1,38 @@
+body
+{
+font:Arial, Helvetica, sans-serif;
+margin-left: 0px;
+margin-top: 0px;
+margin-right: 0px;
+margin-bottom: 0px;
+}
+.hd {
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 80px;
+	font-weight: bold;
+	color: #990000;
+	background-color: #FFFFCC;
+	height: 80px;
+	font-size: 24px;
+}
+.sd
+{
+background-color:#000000;
+color:#FFFFFF;
+height:30px;
+
+}
+a
+{
+text-decoration:none;
+line-height:30px;
+color:#FFFFFF;
+
+
+}
+a:hover
+{
+text-decoration:underline;
+color:#FFFF00;
+
+}
